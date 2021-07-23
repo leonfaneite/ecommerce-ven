@@ -7,7 +7,7 @@ import "./Product.scss"
 
 export default function Product(props){
 
-    const {product} = props
+    const {product, addProductCar} = props
 
     return (
 
@@ -18,7 +18,7 @@ export default function Product(props){
             <Card.Title>{product.name}</Card.Title>
             <Card.Text>{product.extraInfo}</Card.Text>
             <Card.Text>{product.price} $ / unidad</Card.Text>
-            <Button>Añadir al Carrito</Button>
+            <Button onClick={()=> addProductCar(product.id,product.name)}> Añadir al Carrito </Button>
         </Card.Body>
 
     </Card>

@@ -10,7 +10,7 @@ import "./Products.scss"
 
 export default function Products (props){
 
-    const {products: {loading, result , error}} = props
+    const {products: {loading, result , error} , addProductCar} = props
 
 
     return (
@@ -20,7 +20,7 @@ export default function Products (props){
             <Row>
                 {loading || !result ? <Loading/> :
                 
-                result.map((product,index) => <Product key ={index} product ={product}/>)
+                result.map((product,index) => <Product key ={index} product ={product}  addProductCar={addProductCar}/>)
                 
                 } 
 

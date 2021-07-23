@@ -8,7 +8,7 @@ export default function Loading (){
 
 
     return(
-        <div calssName="loading">
+        <div className="loading">
         <Spinner animation="border" role="status"/>
         <h5>Cargando...</h5>
         </div>
